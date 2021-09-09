@@ -92,7 +92,7 @@
 
 | css | function  
 |---|:---:
-| `register.css` | Register 
+| `register.css` | memberRegister.jsp UI 추가 
 | `style.css` | login.jsp UI 추가
 
 <br>
