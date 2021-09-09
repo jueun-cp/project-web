@@ -5,7 +5,7 @@
 	
 		String  jdbcDriver = "com.mysql.jdbc.Driver";
 		//여기 바꿔줘야함
-		String dbUr1 = "jdbc:mysql://localhost/userdb?useSSL=false";
+		String dbUr1 = "jdbc:mysql://localhost/db00?useSSL=false";
 		String username = "root";
 		String password = "1216";
 		
@@ -19,7 +19,7 @@
 		con=DriverManager.getConnection(dbUr1, username, password);
 		st = con.createStatement();
 		
-		rs =  st.executeQuery("select *from usertable where id='"+userName + "'");
+		rs =  st.executeQuery("select *from user where id='"+userName + "'");
 		
 		rs.next();
 	

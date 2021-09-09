@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*" %>
 
 <%
 	
 		String  jdbcDriver = "com.mysql.jdbc.Driver";
-		String dbUr1 = "jdbc:mysql://localhost/userdb?useSSL=false"; 
+		String dbUr1 = "jdbc:mysql://localhost/db00?useSSL=false"; 
 		String username = "root";
 		String password = "1216";
 		
@@ -17,15 +17,15 @@
 		con=DriverManager.getConnection(dbUr1, username, password);
 		st = con.createStatement();
 		
-		rs = st.executeQuery("select *from userTable");
+		rs = st.executeQuery("select *from user");
 		
 		%>
 		<table border='1' cellpadding='0' cellspacing='0' width='500'>
 			<tr>
-				<td width='200'>¾ÆÀÌµð</td>
-				<td width='100'>ÀÌ¸§</td>
-				<td width='100'>³ªÀÌ</td>
-				<td width='100'>»èÁ¦</td>
+				<td width='200'>ì•„ì´ë””</td>
+				<td width='100'>ì´ë¦„</td>
+				<td width='100'>ë‚˜ì´</td>
+				<td width='100'>ì‚­ì œ</td>
 				
 			</tr>
 <%
@@ -40,7 +40,7 @@
 					<td><a href='update.jsp?id=<%=id %>'><%=id %></a></td>
 					<td><%=name %></td>
 					<td><%=age %></td>
-					<td><a href='delete.jsp?id=<%=id %>''>»èÁ¦</a></td>
+					<td><a href='delete.jsp?id=<%=id %>''>ì‚­ì œ</a></td>
 				</tr>
 				<%
 			}

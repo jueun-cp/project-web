@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset= UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ page import = "java.sql.*" %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
@@ -12,8 +12,8 @@
 	
 	<%
 	String  jdbcDriver = "com.mysql.jdbc.Driver";
-	//¿©±â ¹Ù²ãÁà¾ßÇÔ
-	String dbUr1 = "jdbc:mysql://localhost/userdb?useSSL=false";
+	//ì—¬ê¸° ë°”ê¿”ì¤˜ì•¼í•¨
+	String dbUr1 = "jdbc:mysql://localhost/db00?useSSL=false";
 	String username = "root";
 	String password = "1216";
 	
@@ -31,13 +31,13 @@
 	st = con.createStatement();
 	
 	
-	st.executeUpdate("insert into usertable values('"+usrID+"', '"+usrPW+"', '"+usrName+"', "+usrAge+")");
+	st.executeUpdate("insert into user values('"+usrID+"', '"+usrPW+"', '"+usrName+"', "+usrAge+")");
 	
-	System.out.println("µ¥ÀÌÅÍ »ðÀÔ ¿Ï·á");
+	System.out.println("ë°ì´í„° ì‚½ìž… ì™„ë£Œ");
 	con.close();
 	%>
 	
-	<a href = "list.jsp"> ¸®½ºÆ®°¡±â </a> 
+	<a href = "list.jsp"> ë¦¬ìŠ¤íŠ¸ê°€ê¸° </a> 
 	
 </body>
 </html>

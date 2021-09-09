@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
@@ -28,7 +28,7 @@
 		
 		<tr>
 			<td>나이</td>
-			<td><input type='text' placeholder='id를 입력하세요' name='age'/></td>
+			<td><input type='text' placeholder='나이를 입력하세요' name='age'/></td>
 		</tr>
 		
 		<tr>

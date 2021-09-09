@@ -5,7 +5,7 @@
 	
 		String  jdbcDriver = "com.mysql.jdbc.Driver";
 		//여기 바꿔줘야함
-		String dbUr1 = "jdbc:mysql://localhost/userdb?useSSL=false";
+		String dbUr1 = "jdbc:mysql://localhost/db00?useSSL=false";
 		String username = "root";
 		String password = "1216";
 		
@@ -21,7 +21,7 @@
 		st = con.createStatement();
 		
 		//st.executeUpdate("insert into userTable values('"+usrID+"', '"+usrPW+"', '"+usrName+"', "+usrAge+")");
-		st.executeUpdate("delete from userTable where id='" +usrID+ "'");
+		st.executeUpdate("delete from user where id='" +usrID+ "'");
 		
 		con.close();
 		
