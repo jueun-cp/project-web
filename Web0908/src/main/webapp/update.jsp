@@ -1,13 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*" %>
 
 <%
 	
 		String  jdbcDriver = "com.mysql.jdbc.Driver";
-		//ø©±‚ πŸ≤„¡‡æﬂ«‘
-		String dbUr1 = "jdbc:mysql://localhost/db01?useSSL=false"; 
+		//Ïó¨Í∏∞ Î∞îÍøîÏ§òÏïºÌï®
+		String dbUr1 = "jdbc:mysql://localhost/userdb?useSSL=false";
 		String username = "root";
-		String password = "1234";
+		String password = "1216";
 		
 		String userName = request.getParameter("id");
 	
@@ -31,48 +31,38 @@
 		%>
 		
 		<form method='post' action='updateSave.jsp'>
-	<table>
-		<tr>
-			<td>ID</td>
-			<td><input type='text' placeholder='ID∏¶ ¿‘∑¬«œººø‰' disabled name='id' value=<%=usrID %>></td>
-		</tr>
-		
-		<tr>
-			<td>PW</td>
-			<td><input type='text' placeholder='4¿⁄ ¿ÃªÛ' disabled name='pw' value=<%=usrPW %> ></td>
-		</tr>
-		
-		<tr>
-			<td>¿Ã∏ß</td>
-			<td><input type='text' placeholder='¿Ã∏ß' disabled name='name' value=<%=usrName %> ></td>
-		</tr>
-		
-		<tr>
-			<td>≥™¿Ã</td>
-			<td><input type='text' placeholder='≥™¿Ã∏¶ ¿‘∑¬«œººø‰' name='age' value=<%=usrAge %>></td>
-		</tr>
-		
-		<tr>
-			<td colspan=2'><input type='submit' value='ºˆ¡§«œ±‚'/></td>
-		</tr>
-		
-	</table>
+		<table>
+			<tr>
+				<td>ID</td>
+				<td><input type='text' placeholder='IDÎ•º ÏûÖÎ†•ÌïòÏÑ∏Ïöî'   name='id' value=<%=usrID %>></td>
+			</tr>
+			
+			<tr>
+				<td>PW</td>
+				<td><input type='text' placeholder='4Ïûê Ïù¥ÏÉÅ' disabled name='pw' value=<%=usrPW %> ></td>
+			</tr>
+			
+			<tr>
+				<td>Ïù¥Î¶Ñ</td>
+				<td><input type='text' placeholder='Ïù¥Î¶Ñ' disabled name='name' value=<%=usrName %> ></td>
+			</tr>
+			
+			<tr>
+				<td>ÎÇòÏù¥</td>
+				<td><input type='text' placeholder='ÎÇòÏù¥Î•º ÏûÖÎ†•ÌïòÏÑ∏Ïöî' name='age' value=<%=usrAge %>></td>
+			</tr>
+			
+			<tr>
+				<td colspan=2'><input type='submit' value='ÏàòÏ†ïÌïòÍ∏∞'/></td>
+			</tr>
+			
+		</table>
 	</form>
-		
-		
 		
 		<%
 		
-		
-		
-		
-		con.close();
-		
-		
-		
-		
-				
-%>
-
+		con.close();			
+		%>
+	
 
 

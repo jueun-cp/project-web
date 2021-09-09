@@ -1,24 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
 <%@ page import="java.sql.*" %>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="EUC-KR">
-<title>Insert title here</title>
-</head>
-<body>
 
-	<% 
-	String  jdbcDriver = "com.mysql.jdbc.Driver";
-		String dbUr1 = "jdbc:mysql://localhost/userTable?useSSL=false";
+<%
+	
+		String  jdbcDriver = "com.mysql.jdbc.Driver";
+		String dbUr1 = "jdbc:mysql://localhost/userdb?useSSL=false"; 
 		String username = "root";
-		String password = "1234";
+		String password = "1216";
 		
-		String usrID = request.getParameter("id");
-		String usrPW = request.getParameter("pw");
-		String usrName = request.getParameter("name");
-		String usrAge = request.getParameter("age");
 	
 		
 		Connection con = null;
@@ -28,46 +17,44 @@
 		con=DriverManager.getConnection(dbUr1, username, password);
 		st = con.createStatement();
 		
-		
-		rs = st.executeQuery("Select * from userTable");
-		//st.executeUpdate("insert into userTable values('id1', '1234', 'name', 30)");
-		System.out.println("ë°ì´í„° .");
+		rs = st.executeQuery("select *from userTable");
 		
 		%>
-		<table border ='1' >
-		<tr>
-			<th>id</th>
-			<th>pw</th>
-			<th>name</th>
-			<th>age</th>
-		</tr>
-		<% 
-		while(rs.next()){
-			String id = rs.getString(1);
-			String pw = rs.getString(2);
-			String name = rs.getString(3);
-			int age = rs.getInt(4);
-		%>
-		<tr>
-			<td><%=id%></td>
-			<td><%=pw%></td>
-			<td><%=name%></td>
-			<td><%=age%></td>
-		</tr>
-		<%
-		}
-		%>
+		<table border='1' cellpadding='0' cellspacing='0' width='500'>
+			<tr>
+				<td width='200'>¾ÆÀÌµð</td>
+				<td width='100'>ÀÌ¸§</td>
+				<td width='100'>³ªÀÌ</td>
+				<td width='100'>»èÁ¦</td>
+				
+			</tr>
+<%
+			while(rs.next())
+			{
+				String id = rs.getString(1);
+				String name = rs.getString(3);
+				String age = rs.getString(4);
+				
+				%>
+				<tr>
+					<td><a href='update.jsp?id=<%=id %>'><%=id %></a></td>
+					<td><%=name %></td>
+					<td><%=age %></td>
+					<td><a href='delete.jsp?id=<%=id %>''>»èÁ¦</a></td>
+				</tr>
+				<%
+			}
+				
+%>
+			
+
 		</table>
+		
+		
 		<%
 		
 		con.close();
-		%>			
+				
+%>
+	
 
-		<a href = "newForm.jsp">í™ˆìœ¼ë¡œ</a>
-			
-			
-			
-		
-
-</body>
-</html>

@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,32 +7,32 @@
 </head>
 <body>
 
-	<a href='./list.jsp'><input type='button' value='»∏ø¯∏ÆΩ∫∆Æ»Æ¿Œ'/></a>
+	<a href='./list.jsp'><input type='button' value='ÌöåÏõêÎ¶¨Ïä§Ìä∏ÌôïÏù∏'/></a>
 
 	<form method='post' action='formSave.jsp'>
 	<table>
 		<tr>
 			<td>ID</td>
-			<td><input type='text' placeholder='ID∏¶ ¿‘∑¬«œººø‰' name='id'/></td>
+			<td><input type='text' placeholder='IDÎ•º ÏûÖÎ†•ÌïòÏÑ∏Ïöî' name='id'/></td>
 		</tr>
 		
 		<tr>
 			<td>PW</td>
-			<td><input type='password' placeholder='4¿⁄ ¿ÃªÛ' name='pw'/></td>
+			<td><input type='password' placeholder='4Ïûê Ïù¥ÏÉÅ' name='pw'/></td>
 		</tr>
 		
 		<tr>
-			<td>¿Ã∏ß</td>
-			<td><input type='text' placeholder='¿Ã∏ß' name='name'/></td>
+			<td>Ïù¥Î¶Ñ</td>
+			<td><input type='text' placeholder='Ïù¥Î¶Ñ' name='name'/></td>
 		</tr>
 		
 		<tr>
-			<td>≥™¿Ã</td>
-			<td><input type='text' placeholder='id∏¶ ¿‘∑¬«œººø‰' name='age'/></td>
+			<td>ÎÇòÏù¥</td>
+			<td><input type='text' placeholder='idÎ•º ÏûÖÎ†•ÌïòÏÑ∏Ïöî' name='age'/></td>
 		</tr>
 		
 		<tr>
-			<td colspan=2'><input type='submit' value='»∏ø¯∞°¿‘«œ±‚'/></td>
+			<td colspan=2'><input type='submit' value='ÌöåÏõêÍ∞ÄÏûÖÌïòÍ∏∞'/></td>
 		</tr>
 		
 	</table>
