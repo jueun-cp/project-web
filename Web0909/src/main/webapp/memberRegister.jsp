@@ -1,6 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+   
+ <%
+ 	response.setCharacterEncoding("UTF-8");
+ 	request.setCharacterEncoding("UTF-8");
+ 
+ %> 
  <script>
  	function testFunc(){
  		var usrId = document.getElementById("inStr").value;

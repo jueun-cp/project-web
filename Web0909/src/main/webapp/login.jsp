@@ -5,7 +5,7 @@
 	<head>
 		<meta charset="EUC-KR">
 		<title>Insert title here</title>
-		<link rel="stylesheet" type="text/css" href="./css/style.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
 		<div id="wrap">
