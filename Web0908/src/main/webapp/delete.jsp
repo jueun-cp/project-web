@@ -1,13 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*" %>
 
 <%
 	
 		String  jdbcDriver = "com.mysql.jdbc.Driver";
-		//¿©±â ¹Ù²ãÁà¾ßÇÔ
-		String dbUr1 = "jdbc:mysql://localhost/db01?useSSL=false"; 
+		//ì—¬ê¸° ë°”ê¿”ì¤˜ì•¼í•¨
+		String dbUr1 = "jdbc:mysql://localhost/userdb?useSSL=false";
 		String username = "root";
-		String password = "1234";
+		String password = "1216";
 		
 		String usrID = request.getParameter("id");
 		
