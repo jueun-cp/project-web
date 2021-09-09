@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<div id="wrap">
-		<form action="">
+		<form action="checkLogin.jsp" method='post'>
 			<div id="label">ID</div>
 			<div><input type="text" name ="id" placeholder="입력해주세요""/></div>
 			<div id="label">Password</div>

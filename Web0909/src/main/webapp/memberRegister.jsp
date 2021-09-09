@@ -1,5 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+ <script>
+ 	function testFunc(){
+ 		var usrId = document.getElementById("inStr").value;
+ 		location.href="./checkId.jsp?id="+usrId;
+ 	}
+ </script>
+ 
 <!DOCTYPE html>
 <html>
 	<head>
@@ -15,8 +23,11 @@
 			<div class="content">
 				<form action="registerData.jsp" method="POST">
 					<label for="id">아이디</label>
-				  	<input type="text" name="id" value="">
-				  	<div id="con"><a href="">중복체크</a></div>
+					
+				  	<input type="text" name="id" id ='inStr' value="">
+				  	<div id="con">
+				  		<a href='javascript:testFunc()'>중복체크</a>
+				  	</div>
 				  	<label for="pw">비밀번호</label>
 				  	<input type="password" name="pw" value="">
 				  	<label for="name">이름</label>
