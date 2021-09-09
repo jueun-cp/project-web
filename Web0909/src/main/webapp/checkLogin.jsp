@@ -19,7 +19,7 @@
 		String usrID = request.getParameter("id");
 		String usrPW = request.getParameter("pw");
 		
-		rs = st.executeQuery("select count(*) from userTable where id='"+usrID+"' and pw='"+usrPW+"'");
+		rs = st.executeQuery("select count(*) from user where id='"+usrID+"' and pw='"+usrPW+"'");
 		rs.next();
 		String gbn = rs.getString(1);
 		

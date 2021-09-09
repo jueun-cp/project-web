@@ -2,6 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*" %>
 <%
+		System.out.println("진입함");
+
 		String  jdbcDriver = "com.mysql.jdbc.Driver";
 		//여기 바꿔줘야함
 		String dbUr1 = "jdbc:mysql://localhost/db01?useSSL=false"; 
@@ -16,9 +18,9 @@
 		st = con.createStatement();
 		
 		String usrID = request.getParameter("id");
-		String usrPW = request.getParameter("pw");
+		System.out.println(usrID);
 		
-		rs = st.executeQuery("select count(*) from userTable where id='"+usrID+"'");
+		rs = st.executeQuery("select count(*) from user where id='"+usrID+"'");
 		rs.next();
 		String gbn = rs.getString(1);
 		
