@@ -21,7 +21,7 @@
 	//여기 바꿔줘야함
 	String dbUr1 = "jdbc:mysql://localhost/db01?useSSL=false";
 	String username = "root";
-	String password = "1234";
+	String password = "1216";
 	
 	String usrID = request.getParameter("id");
 	String usrPW = request.getParameter("pw");
