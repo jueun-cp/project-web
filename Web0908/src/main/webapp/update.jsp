@@ -11,7 +11,6 @@
 		
 		String userName = request.getParameter("id");
 	
-		
 		Connection con = null;
 		java.sql.Statement st = null;
 		ResultSet rs = null;
@@ -23,7 +22,6 @@
 		
 		rs.next();
 	
-		
 		String usrID = rs.getString(1);
 		String usrPW = rs.getString(2);
 		String usrName = rs.getString(3);
