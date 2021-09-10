@@ -15,7 +15,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Web0909 : 회원가입</title>
-		<link href="memberRegister.css" rel="stylesheet" type="text/css">
+		<link href="register.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
 		<div class="wrap">
