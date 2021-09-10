@@ -11,6 +11,9 @@
 	<h1> save form</h1>
 	
 	<%
+ 	response.setCharacterEncoding("UTF-8");
+ 	request.setCharacterEncoding("UTF-8");
+ 	
 	String  jdbcDriver = "com.mysql.jdbc.Driver";
 	//여기 바꿔줘야함
 	String dbUr1 = "jdbc:mysql://localhost/db00?useSSL=false";
@@ -21,7 +24,6 @@
 	String usrPW = request.getParameter("pw");
 	String usrName = request.getParameter("name");
 	String usrAge = request.getParameter("age");
-
 	
 	Connection con = null;
 	java.sql.Statement st = null;
@@ -29,7 +31,6 @@
 	Class.forName(jdbcDriver);//.newInstance();
 	con=DriverManager.getConnection(dbUr1, username, password);
 	st = con.createStatement();
-	
 	
 	st.executeUpdate("insert into user values('"+usrID+"', '"+usrPW+"', '"+usrName+"', "+usrAge+")");
 	

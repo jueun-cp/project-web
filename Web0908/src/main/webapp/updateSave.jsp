@@ -14,7 +14,6 @@
 		String usrName = request.getParameter("name");
 		String usrAge = request.getParameter("age");
 	
-		
 		Connection con = null;
 		java.sql.Statement st = null;
 		ResultSet rs = null;
