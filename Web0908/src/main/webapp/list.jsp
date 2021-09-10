@@ -8,8 +8,6 @@
 		String username = "root";
 		String password = "1216";
 		
-	
-		
 		Connection con = null;
 		java.sql.Statement st = null;
 		ResultSet rs = null;
@@ -40,7 +38,7 @@
 					<td><a href='update.jsp?id=<%=id %>'><%=id %></a></td>
 					<td><%=name %></td>
 					<td><%=age %></td>
-					<td><a href='delete.jsp?id=<%=id %>''>삭제</a></td>
+					<td><a href='delete.jsp?id=<%=id %>'>삭제</a></td>
 				</tr>
 				<%
 			}

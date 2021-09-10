@@ -2,7 +2,6 @@
 <%@ page import="java.sql.*" %>
 
 <%
-	
 		String  jdbcDriver = "com.mysql.jdbc.Driver";
 		//여기 바꿔줘야함
 		String dbUr1 = "jdbc:mysql://localhost/db00?useSSL=false";
@@ -10,8 +9,6 @@
 		String password = "1216";
 		
 		String usrID = request.getParameter("id");
-		
-	
 		
 		Connection con = null;
 		java.sql.Statement st = null;
